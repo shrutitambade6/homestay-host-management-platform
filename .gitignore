@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------
+# Homestay Host Management Platform - .gitignore
+# Stack (Task 3): Java 21 + Spring Boot + Maven, React + Vite, Docker
+# ---------------------------------------------------------------
+
+# --- Secrets and local environment (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+
+# --- Maven / Java build output ---
+backend/target/
+target/
+*.class
+*.jar
+*.war
+hs_err_pid*.log
+replay_pid*.log
+# Keep the Maven Wrapper (it is required to build)
+!.mvn/wrapper/maven-wrapper.jar
+
+# --- Frontend (React + Vite), added in Sprint 1 ---
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# --- IDEs ---
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.vscode/*
+!.vscode/extensions.json
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# --- Logs and temporary files ---
+*.log
+logs/
+*.tmp
+*.swp
+*~
+
+# --- Operating system files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

@@ -1,0 +1,15 @@
+# Normalise line endings so the project works on Windows and Linux (CI, Docker).
+* text=auto
+
+# Shell scripts must keep LF endings or they fail inside Linux containers and CI.
+mvnw text eol=lf
+*.sh text eol=lf
+
+# Windows scripts keep CRLF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary files
+*.jar binary
+*.png binary
+*.jpg binary
